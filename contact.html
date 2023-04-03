@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahyadri public school | Page name </title>
+    <title>Sahyadri public school |Contact Us </title>
     <link rel="shortcut icon" type="images" href="images/logo.jpg">
 
     <!-- font awesome cdn link  -->
@@ -13,6 +13,7 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="ContactUs/style.css">
 
 </head>
 
@@ -21,7 +22,7 @@
 
     <header class="header">
 
-        <a href="index.html" class="logo"> <i class="fas fa-user-graduate"></i> Sahyadri public school </a>
+        <a href="index.html" class="logo"> <i class="fas fa-user-graduate"></i> Sahyadri public school | Contact Us </a>
 
         <div id="menu-btn" class="fas fa-bars"></div>
 
@@ -44,39 +45,47 @@
     <!-- header section ends -->
 
     <section class="heading">
-        <h3>about us</h3>
-        <p> <a href="home.html">home >></a> about </p>
+        <h3>Contact US </h3>
+        <p> <a href="home.html">home >></a> Contact US </p>
     </section>
 
-    <!-- about section starts  -->
 
-    <section class="about">
+    <!-- Contact Form starts  -->
+    <div class="container">
 
+        <div class="contact-form">
+            <!-- <span class="circle one"></span>
+                <span class="circle two"></span> -->
 
-    </section>
+            <form action="" method="post" autocomplete="off" id="contact-us">
+                <h3 class="title">Contact us</h3>
+                <div class="input-container">
+                    <input type="text" name="name" class="input" />
+                    <label for="">Full Name</label>
+                    <span>Full Name</span>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" class="input" id="email" />
+                    <label for="">Email</label>
+                    <span>Email</span>
+                </div>
+                <div class="input-container">
+                    <input type="tel" name="phone" class="input" id="phone" />
+                    <label for="">Phone</label>
+                    <span>Phone</span>
+                </div>
+                <div class="input-container textarea">
+                    <textarea name="message" class="input" id="feedback"></textarea>
+                    <label for="">Message</label>
+                    <span>Message</span>
+                </div>
+                <input type="submit" name="submit" value="Send" class="btn" />
+            </form>
+        </div>
+    </div>
+    </div>
 
-    <!-- about section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Contact Form ends -->
 
     <!-- footer section starts  -->
 
@@ -107,10 +116,23 @@
         <div class="credit"> created by <span>Sahyadri public school</span> | all rights reserved! 2024 ® </div>
 
     </section>
+    <script>
+        const form = document.querySelector('#contact-us');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const feedback = document.querySelector('#feedback').value;
+            const recipient = 'feedback@example.com';
+            const subject = 'Feedback from website';
+            const body = encodeURIComponent(feedback);
+            const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+        });
+    </script>
 
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
+    <script src="ContactUs/app.js"></script>
 
 </body>
 

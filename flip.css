@@ -9,6 +9,8 @@
     height: 400px;
     position: relative;
     margin-left: 40px;
+    background-color:#2852cf;
+    
   }
 
   .card-inner {
@@ -22,6 +24,7 @@
 
   .card:hover .card-inner {
     transform: rotateY(180deg);
+    
   }
 
   .card-front,
@@ -31,6 +34,7 @@
     height: 100%;
     backface-visibility: hidden;
     text-align: center;
+   
   }
 
   .card-front {
@@ -42,4 +46,17 @@
     background-color: #f8f9fa;
     color: #212529;
     transform: rotateY(180deg);
+    /* margin-top: 20px; */
+  }
+  .card-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color:#d21d41 ;
+    color: #ffff;
+    font-size: medium;
+    margin-bottom: 70px;
+    /* margin-top: 10px; */
   }

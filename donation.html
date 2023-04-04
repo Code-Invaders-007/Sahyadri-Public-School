@@ -7,192 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahyadri public school | Page name </title>
-    <link rel="shortcut icon" type="images" href="images/logo.jpg">
+    <link rel="shortcut icon" type="images" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/donation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            margin: 0 auto;
-            max-width: 600px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .heading {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #555;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #224bcf;
-            font-size: 16px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        .form-group .fa {
-            margin-right: 10px;
-            color: #ccc;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #dc1544;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #555;
-        }
-
-        /* slide bar */
-        .slider-wrapper {
-            display: flex;
-            align-items: center;
-        }
-
-        #slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 8px;
-            border-radius: 20px;
-            background: linear-gradient(to right, #c8c8c8, #c8c8c8) no-repeat;
-            background-size: 100% 100%;
-            outline: none;
-            margin-right: 8px;
-        }
-
-        #slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #555;
-            cursor: pointer;
-        }
-
-        #slider::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #555;
-            cursor: pointer;
-        }
-
-        #slider::-ms-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #555;
-            cursor: pointer;
-        }
-
-        select {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 40px;
-            border-radius: 20px;
-            background: #c8c8c8;
-            outline: none;
-            cursor: pointer;
-            padding: 0 8px;
-        }
-
-        #month-select {
-
-            width: 20%;
-            height: 40px;
-            border-radius: 20px;
-            background: #c8c8c8;
-            outline: none;
-            cursor: pointer;
-            padding: 0 8px;
-        }
-
-        #year-select {
-
-            width: 20%;
-            height: 40px;
-            border-radius: 20px;
-            background: #c8c8c8;
-            outline: none;
-            cursor: pointer;
-            padding: 0 8px;
-        }
-
-        select {
-            display: inline-block;
-            width: 100px;
-            margin-right: 10px;
-        }
-
-        select option[value="custom"] {
-            background-color: #fff;
-        }
-
-        select:focus option[value="custom"] {
-            background-color: #f1f1f1;
-        }
-    </style>
+    <script src="js/loader.js"></script>
 </head>
 
 <body>
     <!-- header section starts  -->
-
-    <header class="header">
-
-        <a href="index.html" class="logo"> <i class="fas fa-user-graduate"></i> Sahyadri public school </a>
-
-        <div id="menu-btn" class="fas fa-bars"></div>
-
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="admission.html">Admissions</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="teachertraining.html">Teacher Training</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="ContactUs/contact.php">CONTACT US</a></li>
-                <li><a href="donation.html">DONATION</a></li>
-            </ul>
-        </nav>
-
-    </header>
+    <div id="header"></div>
+    <!-- header section ends -->
 
     <div class="container">
-        <h2 class="heading">Payment Checkout Form</h2>
-        <form>
+        <h2 class="heading">Donation </h2>
+        <form id="donation-form">
             <div class="form-group">
                 <label for="name"><i class="fas fa-user"></i> Name</label>
                 <input type="text" id="name" name="name" required>
@@ -203,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label for="card"><i class="fas fa-credit-card"></i> Card Number</label>
-                <input type="text" id="card" name="card" required>
+                <input type="text" id="cardNumber" name="card" required>
             </div>
             <div class="form-group">
 
@@ -244,7 +73,7 @@
             </div>
             <div class="form-group">
                 <label for="cvv"><i class="fas fa-lock"></i> CVV</label>
-                <input type="text" id="cvv" name="cvv" required>
+                <input type="password" id="cvv" name="cvv" required>
             </div>
             <div class="form-group">
                 <label for="amount"><i class="fas fa-dollar-sign"></i> Amount</label>
@@ -269,141 +98,24 @@
                 <!-- <input type="number" id="amount" name="amount" value="1" min="1" max="100" readonly required> -->
             </div>
             <div class="form-group">
-                <button class="btn" type="submit">Pay Now</button>
+                <button class="btn" type="submit" id="">Pay Now</button>
             </div>
         </form>
     </div>
     <!-- footer section starts  -->
 
-    <section class="footer">
+    <div id="footer"></div>
 
-        <div class="box-container">
-
-            <div class="box">
-                <h3>explore</h3>
-                <a href="home.html"> <i class="fas fa-arrow-right"></i> HOME </a>
-                <a href="about.html"> <i class="fas fa-arrow-right"></i> ABOUT </a>
-                <a href="course-1.html"> <i class="fas fa-arrow-right"></i> GALLERY </a>
-                <a href="course-2.html"> <i class="fas fa-arrow-right"></i> BLOG </a>
-                <a href="teachers.html"> <i class="fas fa-arrow-right"></i> CONTACT US </a>
-            </div>
-
-            <div class="box">
-                <h3>Follow US</h3>
-                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-
-            </div>
-
-        </div>
-
-        <div class="credit"> created by <span>Sahyadri public school</span> | all rights reserved! 2024 ® </div>
-
-    </section>
+    <!-- footer section ends -->
 
 
     <!-- custom js file link  -->
-    <script>
 
-        const slider = document.getElementById("slider");
-        const options = document.getElementById("options");
-        const amountDisplay = document.getElementById("amount-display");
-        const amountInput = document.getElementById("amount");
-
-        slider.addEventListener("input", () => {
-            const value = slider.value;
-            amountInput.value = value;
-            amountDisplay.textContent = `₹`;
-            options.value = [...options.options].find(option => option.dataset.value === value).value;
-            amountInput.readOnly = (options.value !== "custom");
-        });
-
-        amountInput.addEventListener("input", () => {
-            const value = amountInput.value;
-            slider.value = value;
-            amountDisplay.textContent = `₹`;
-            options.value = "custom";
-            amountInput.readOnly = false;
-        });
-
-        options.addEventListener("change", () => {
-            const value = options.value;
-            slider.value = options.options[options.selectedIndex].dataset.value;
-            amountDisplay.textContent = `₹`;
-            amountInput.value = slider.value;
-            amountInput.readOnly = (value !== "custom");
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            amountDisplay.textContent = `₹`;
-            // amountInput
-        });
-
-
-    </script>
-    <!-- Date and month -->
-    <script>
-        const expirationDateInput = document.getElementById("expiration-date");
-        const monthYearDropdownsContainer = document.getElementById("month-year-dropdowns");
-
-        expirationDateInput.addEventListener("change", () => {
-            const expirationDate = new Date(expirationDateInput.value);
-            const currentYear = new Date().getFullYear();
-            const selectedMonth = expirationDate.getMonth();
-            const selectedYear = expirationDate.getFullYear();
-
-            const months = [
-                { value: 0, name: "January" },
-                { value: 1, name: "February" },
-                { value: 2, name: "March" },
-                { value: 3, name: "April" },
-                { value: 4, name: "May" },
-                { value: 5, name: "June" },
-                { value: 6, name: "July" },
-                { value: 7, name: "August" },
-                { value: 8, name: "September" },
-                { value: 9, name: "October" },
-                { value: 10, name: "November" },
-                { value: 11, name: "December" }
-            ];
-
-            const years = [];
-            for (let i = currentYear; i <= currentYear + 10; i++) {
-                years.push(i);
-            }
-
-            const monthDropdown = createDropdown("month", "Month", months, selectedMonth);
-            const yearDropdown = createDropdown("year", "Year", years, selectedYear);
-
-            monthYearDropdownsContainer.innerHTML = "";
-            monthYearDropdownsContainer.appendChild(monthDropdown);
-            monthYearDropdownsContainer.appendChild(yearDropdown);
-        });
-
-        function createDropdown(id, label, options, selectedValue) {
-            const dropdown = document.createElement("select");
-            dropdown.id = id;
-            dropdown.name = id;
-
-            const labelElement = document.createElement("label");
-            labelElement.htmlFor = id;
-            labelElement.textContent = label;
-
-            options.forEach(option => {
-                const optionElement = document.createElement("option");
-                optionElement.value = option.value;
-                optionElement.text = option.name;
-                optionElement.selected = (option.value === selectedValue);
-                dropdown.appendChild(optionElement);
-            });
-
-            return labelElement.appendChild(dropdown);
-        }
-
-    </script>
+    <script src="https://js.stripe.com/v3/"></script>
     <script src="js/script.js"></script>
+    <script src="js/donation.js"></script>
+    <script src="js/payment.js"></script>
+
 
 </body>
 

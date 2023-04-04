@@ -6,48 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahyadri public school |Contact Us </title>
-    <link rel="shortcut icon" type="images" href="images/logo.jpg">
+    <link rel="shortcut icon" type="images" href="images/favicon.png">
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="ContactUs/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/loader.js"></script>
 
 </head>
 
 <body>
     <!-- header section starts  -->
-
-    <header class="header">
-
-        <a href="index.html" class="logo"> <i class="fas fa-user-graduate"></i> Sahyadri public school | Contact Us </a>
-
-        <div id="menu-btn" class="fas fa-bars"></div>
-
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="admission.html">Admissions</a></li>
-                <li><a href="gallery.html">Events</a></li>
-                <li><a href="training.html">Teacher Training</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="ContactUs/contact.php">CONTACT US</a></li>
-                <li><a href="donation.html">DONATION</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
+    <div id="header"></div>
     <!-- header section ends -->
 
     <section class="heading">
         <h3>Contact US </h3>
-        <p> <a href="home.html">home >></a> Contact US </p>
+        <p> <a href="index.html">home >></a> Contact US </p>
     </section>
 
 
@@ -89,51 +67,15 @@
     <!-- Contact Form ends -->
 
     <!-- footer section starts  -->
+    <div id="footer"></div>
+    <!-- footer section ends -->
 
-    <section class="footer">
-
-        <div class="box-container">
-
-            <div class="box">
-                <h3>explore</h3>
-                <a href="home.html"> <i class="fas fa-arrow-right"></i> HOME </a>
-                <a href="about.html"> <i class="fas fa-arrow-right"></i> ABOUT </a>
-                <a href="course-1.html"> <i class="fas fa-arrow-right"></i> GALLERY </a>
-                <a href="course-2.html"> <i class="fas fa-arrow-right"></i> BLOG </a>
-                <a href="teachers.html"> <i class="fas fa-arrow-right"></i> CONTACT US </a>
-            </div>
-
-            <div class="box">
-                <h3>Follow US</h3>
-                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-
-            </div>
-
-        </div>
-
-        <div class="credit"> created by <span>Sahyadri public school</span> | all rights reserved! 2024 ® </div>
-
-    </section>
-    <script>
-        const form = document.querySelector('#contact-us');
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const feedback = document.querySelector('#feedback').value;
-            const recipient = 'feedback@example.com';
-            const subject = 'Feedback from website';
-            const body = encodeURIComponent(feedback);
-            const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
-            window.location.href = mailtoLink;
-        });
-    </script>
 
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
-    <script src="ContactUs/app.js"></script>
+    <script src="js/mail.js"></script>
+    <script src="js/contact_us-trans.js"></script>
 
 </body>
 

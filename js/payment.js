@@ -1,6 +1,9 @@
-<script src="https://js.stripe.com/v3/"></script>
+const stripe = Stripe('pk_test_51MsoG4SDg7tLEBalSJ0FLLqS7IJ6viDm0aN02aXGGB7IZxrnFLEvZvpqUgvjVqepubcRtJSk6fwzxAZiN1emnVPZ00zzyjLcWk');
 
-const stripe = Stripe('YOUR_PUBLIC_API_KEY');
+ 
+
+// call the below function when the form is submitted
+
 
 function handleDonationFormSubmission(event) {
     event.preventDefault(); // Prevent the form from submitting normally
@@ -8,9 +11,9 @@ function handleDonationFormSubmission(event) {
     // Get the donor's payment information from the form
     const card = {
         number: document.getElementById('cardNumber').value,
-        exp_month: document.getElementById('expirationMonth').value,
-        exp_year: document.getElementById('expirationYear').value,
-        cvc: document.getElementById('cvc').value
+        exp_month: document.getElementById('month-select').value,
+        exp_year: document.getElementById('year-select').value,
+        cvc: document.getElementById('cvv').value
     };
 
     // Use the Stripe API to generate a payment token
@@ -22,7 +25,10 @@ function handleDonationFormSubmission(event) {
             // Send the payment token to your server to process the payment
             console.log(result.token.id);
             // Redirect the user to a thank you page
-            window.location.href = '/thank-you.html';
+            window.location.href = '/events.html';
         }
     });
 }
+
+// call the avbove function when the form is submitted
+document.getElementById('donation-form').addEventListener('submit', handleDonationFormSubmission);

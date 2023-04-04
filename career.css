@@ -9,8 +9,9 @@ table {
   }
   
   th {
-    background:#3058dc;
+    background:#2852cf;
     font-weight: bold;
+    color:#ffff;
   }
   
   tr:nth-child(even) {
@@ -18,16 +19,17 @@ table {
   }
   
   .action-button {
-    background-color: #ADD8E6;
+    background-color: #ea5774;
     border: none;
-    color:#ADD8E6;
-    padding: 8px 16px;
+    color:#ffff;
+    padding: 4px 8px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 10px;
+    margin: 1px 1px;
     cursor: pointer;
     border-radius: 4px;
+    height:24px;
   }
   

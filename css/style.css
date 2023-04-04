@@ -1,7 +1,18 @@
+/* color directory */
+:root {
+    --primary-color: #224bcf;
+    --secondary-color: crimson;
+    --tertiary-color: #28a745;
+    --heading-text-color: #302851;
+    --text-color: #212529;
+    --background-color: #f8f9fa;
+
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 
 * {
-     font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
     /* font-family:Arial, Helvetica, sans-serif; */
     margin: 0;
     padding: 0;
@@ -34,7 +45,7 @@ section {
     margin-top: 1rem;
     padding: 1rem 3rem;
     background: #e9edfb;
-    color: #224bcf;
+    color: var(--primary-color);
     cursor: pointer;
     border-radius: .5rem;
     font-size: 1.7rem;
@@ -42,17 +53,21 @@ section {
 
 .btn:hover {
     color: #fff;
-    background: #224bcf;
+    background: var(--primary-color);
 }
-.adm img{
-    margin-left:20% ;
+
+.adm img {
+    margin-left: 20%;
 }
-.doc{
+
+.doc {
     font-size: medium;
 }
-.doclist{
-     margin-left: 30px;
+
+.doclist {
+    margin-left: 30px;
 }
+
 .heading {
     background: url(../images/heading-bg.png) no-repeat;
     background-size: cover;
@@ -72,11 +87,11 @@ section {
 
 .heading p a {
     padding-right: .5rem;
-    color: crimson;
+    color: var(--secondary-color);
 }
 
 .heading p a:hover {
-    color: #224bcf
+    color: var(--primary-color)
 }
 
 .header {
@@ -96,7 +111,7 @@ section {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 9%;
-    background: #224bcf;
+    background: var(--primary-color);
 }
 
 .header .logo {
@@ -106,7 +121,7 @@ section {
 }
 
 .header .logo i {
-    color: crimson;
+    color: var(--secondary-color);
 }
 
 .header .navbar ul {
@@ -130,14 +145,14 @@ section {
 }
 
 .header .navbar ul li a:hover {
-    background: crimson;
+    background: var(--secondary-color);
 }
 
 .header .navbar ul li ul {
     position: absolute;
     left: 0;
     width: 20rem;
-    background: #224bcf;
+    background: var(--primary-color);
     display: none;
 }
 
@@ -315,7 +330,7 @@ section {
 
 .course-2 .box .content span {
     font-size: 1.4rem;
-    color: crimson;
+    color: var(--secondary-color);
     background: #ffeaf4;
     padding: .5rem 1rem;
 }
@@ -355,12 +370,12 @@ section {
 }
 
 .course-2 .box .content .icons a:hover {
-    color: crimson;
+    color: var(--secondary-color);
 }
 
 .course-2 .box .content .icons a i {
     padding-right: .5rem;
-    color: crimson;
+    color: var(--secondary-color);
 }
 
 .course-3 {
@@ -469,13 +484,14 @@ section {
     border: 0.5rem solid #fff;
     border-radius: .5rem;
 }
-.prinfo
-{
-    font-family:Arial, Helvetica, sans-serif;
+
+.prinfo {
+    font-family: Arial, Helvetica, sans-serif;
     /* font-weight: 200; */
-    font-size:small;
+    font-size: small;
 
 }
+
 .teachers {
     display: -ms-grid;
     display: grid;
@@ -544,7 +560,7 @@ section {
 }
 
 .teachers .box .image .share a:hover {
-    color: crimson;
+    color: var(--secondary-color);
 }
 
 .teachers .box .image img {
@@ -615,12 +631,12 @@ section {
 }
 
 .blog .box .content .icons a:hover {
-    color: #224bcf;
+    color: var(--primary-color);
 }
 
 .blog .box .content .icons a i {
     padding-right: .5rem;
-    color: #224bcf;
+    color: var(--primary-color);
 }
 
 .blog .box .content h3 {
@@ -657,7 +673,7 @@ section {
     width: 6.5rem;
     line-height: 6.5rem;
     font-size: 2.5rem;
-    color: #224bcf;
+    color: var(--primary-color);
     background: #e9edfb;
     border-radius: 50%;
     text-align: center;
@@ -751,7 +767,7 @@ section {
 }
 
 .footer .box-container .box a:hover {
-    color: crimson;
+    color: var(--secondary-color);
 }
 
 .footer .box-container .box a:hover i {
@@ -759,7 +775,7 @@ section {
 }
 
 .footer .box-container .box a i {
-    color: crimson;
+    color: var(--secondary-color);
     padding-right: .5rem;
 }
 
@@ -774,7 +790,7 @@ section {
 }
 
 .footer .credit span {
-    color: crimson;
+    color: var(--secondary-color);
 }
 
 .donation-container {
@@ -803,7 +819,7 @@ section {
 }
 
 .donation-box .title {
-    background-color: #224bcf;
+    background-color: var(--primary-color);
     width: 100%;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -815,7 +831,7 @@ section {
 }
 
 .donation-box .donate-button {
-    background-color: #224bcf;
+    background-color: var(--primary-color);
     width: 100%;
     color: white;
     text-align: center;
@@ -1019,7 +1035,7 @@ section {
 .checkbox {
     -webkit-appearance: none;
     background-color: #fafafa;
-    border: 1px solid #224bcf;
+    border: 1px solid var(--primary-color);
     padding: 9px;
     border-radius: 3px;
     display: inline-block;
@@ -1035,8 +1051,8 @@ section {
 .checkbox:checked:active {}
 
 .checkbox:checked {
-    background-color: #224bcf;
-    border: 1px solid #224bcf;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     color: white;
 }
 
@@ -1095,7 +1111,7 @@ section {
         top: 99%;
         left: 0;
         right: 0;
-        background: #224bcf;
+        background: var(--primary-color);
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }

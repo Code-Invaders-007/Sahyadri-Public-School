@@ -1,6 +1,8 @@
 
 const form = document.querySelector('#contact-us');
 form.addEventListener('submit', (event) => {
+
+
   event.preventDefault();
   const feedback = document.querySelector('#feedback').value;
   const recipient = 'feedback@example.com';

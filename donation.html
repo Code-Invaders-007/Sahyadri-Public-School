@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahyadri public school | Page name </title>
+    <title>Sahyadri public school | Donation </title>
     <link rel="shortcut icon" type="images" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/donation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://js.stripe.com/v3/"></script>
     <script src="js/loader.js"></script>
 </head>
 
@@ -21,18 +22,18 @@
 
     <div class="container">
         <h2 class="heading">Donation </h2>
-        <form id="donation-form">
-            <div class="form-group">
-                <label for="name"><i class="fas fa-user"></i> Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
+
+        <div class="form-group">
+            <label for="name"><i class="fas fa-user"></i> Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <!-- <div class="form-group" id="cardNumber">
                 <label for="card"><i class="fas fa-credit-card"></i> Card Number</label>
-                <input type="text" id="cardNumber" name="card" required>
+                <input type="text" name="card" required>
             </div>
             <div class="form-group">
 
@@ -59,49 +60,80 @@
                     <label for="year-select">Year:</label>
                     <select id="year-select">
                         <option value="">Select Year</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
-                        <option value="2027">2027</option>
-                        <option value="2028">2028</option>
-                        <option value="2029">2029</option>
-                        <option value="2030">2030</option>
+                        <option value="23">2023</option>
+                        <option value="24">2024</option>
+                        <option value="25">2025</option>
+                        <option value="26">2026</option>
+                        <option value="27">2027</option>
+                        <option value="28">2028</option>
+                        <option value="29">2029</option>
+                        <option value="30">2030</option>
                     </select>
                 </div>
-                <!-- <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required> -->
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
             </div>
             <div class="form-group">
                 <label for="cvv"><i class="fas fa-lock"></i> CVV</label>
                 <input type="password" id="cvv" name="cvv" required>
-            </div>
+            </div> -->
+
+        <!-- Experminet -->
+        <div>
             <div class="form-group">
-                <label for="amount"><i class="fas fa-dollar-sign"></i> Amount</label>
-                <div class="slider-wrapper">
-                    <input type="range" id="slider" name="slider" min="100" max="10000" value="1">
-                    <select id="options" name="options[]">
-                        <option value="option1" data-value="300">₹300</option>
-                        <option value="option2" data-value="500">₹500</option>
-                        <option value="option3" data-value="800">₹800</option>
-                        <option value="custom" data-value="0">Custom</option>
-                    </select>
-                    <span id="amount-display">₹</span>
-                    <br>
-                    <input type="number" id="amount" name="amount" value="1" min="1" max="100" readonly required>
+                <label for="cardnum"><i class="fas fa-credit-card"></i>Card Number: </label>
+                <div class="ca">
+                    <div id="cardnum"></div>
                 </div>
-            </div>
+                <br>
+                <br>
 
-            <div class="form-group">
 
-                <label for="amount"> Amount</label>
-                <!-- <input type="number" id="amount" name="amount" required> -->
-                <!-- <input type="number" id="amount" name="amount" value="1" min="1" max="100" readonly required> -->
+                <label for="cardexp"><i class="far fa-calendar-alt"></i> Card Expiry: </label>
+                <div class="ca">
+                    <div id="cardexp"></div>
+                </div>
+                <br><br>
+
+
+                <label for="cardcvc"><i class="fas fa-lock"></i> Card CVC/CVV: </label>
+                <div class="ca">
+                    <div id="cardcvc"></div>
+                </div>
+
+
             </div>
-            <div class="form-group">
-                <button class="btn" type="submit" id="">Pay Now</button>
+            <div class="status"></div>
+        </div>
+        <div class="form-group">
+            <label for="amount"><i class="fa fa-rupee-sign" style="color: #224bcf;"></i> Amount</label>
+            <div class="slider-wrapper">
+                <input type="range" id="slider" name="slider" min="100" max="10000" value="1">
+                <select id="options" name="options[]">
+                    <option value="custom" data-value="0">Custom</option>
+                    <option value="option1" data-value="300">₹300</option>
+                    <option value="option2" data-value="500">₹500</option>
+                    <option value="option3" data-value="800">₹800</option>
+                </select>
+                <span id="amount-display">₹</span>
+                <br>
+                <input type="number" id="amount" name="amount" value="1" min="1" max="100" readonly required>
             </div>
-        </form>
+        </div>
+
+        <div class="form-group">
+
+            <label for="amount"> Amount</label>
+            <!-- <input type="number" id="amount" name="amount" required> -->
+            <!-- <input type="number" id="amount" name="amount" value="1" min="1" max="100" readonly required> -->
+        </div>
+        <div class="form-group">
+            <button disabled id="pay_btn">Pay Now</button>
+
+        </div>
+
+
     </div>
+    <div class="status"></div>
     <!-- footer section starts  -->
 
     <div id="footer"></div>
@@ -111,10 +143,9 @@
 
     <!-- custom js file link  -->
 
-    <script src="https://js.stripe.com/v3/"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     <script src="js/donation.js"></script>
-    <script src="js/payment.js"></script>
+    <script src="payment.js"></script>
 
 
 </body>

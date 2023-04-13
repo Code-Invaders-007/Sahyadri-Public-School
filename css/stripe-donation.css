@@ -1,0 +1,50 @@
+.don-form {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    padding-bottom: 70px;
+    padding-top: 50px;
+    background-color: rgb(204, 204, 255);
+    border-radius: 5px;
+
+}
+
+.status {
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+    text-align: left;
+    display: none;
+    line-height: 2rem;
+    padding-left: 15%;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    font-size: x-large;
+    position: relative;
+    left: 40%;
+}
+
+.don-form>div {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    left: 40%;
+}
+
+button {
+    width: 35%;
+    margin: auto;
+    position: absolute;
+    left: 32%;
+    bottom: 7%;
+    font-weight: 600;
+    padding: 4px 0;
+    font-size: medium;
+    border-radius: 5px;
+    border: solid 3px rgb(128, 128, 255);
+    background-color: rgb(204, 204, 255);
+}

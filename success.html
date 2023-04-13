@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Payment Sucees</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="js/loader.js"></script>
+    <style>
+        .pay_state {
+            width: 80%;
+            margin: auto;
+            margin-top: 25px;
+            text-align: left;
+            display: none;
+            line-height: 2rem;
+            padding-left: 15%;
+        }
+
+        button {
+            display: inline-block;
+            background-color: #dc1544;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- hedaer section starts -->
+    <div id="header"></div>
+    <!-- header section ends -->
+
+    <div style="margin-left: 30%; margin-right: 30%;">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_farddx5s.json" background="transparent"
+            speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+        <!-- HTML code for success.html -->
+
+        <h1>Thank you for Donating 🙏🏻</span> </h1>
+
+        <h2>Note Down transactionId for future reference</h2>
+        <strong>
+            <br><br>
+            <ul>
+
+                <li>
+                    <h3>
+                        <p>Transaction ID: <span id="transactionId"></span></p>
+                    </h3>
+                    <br><br>
+                </li>
+
+                <li>
+                    <h3>
+                        <p>Amount:Rs <span id="amount"></span></p>
+                    </h3>
+                    <br><br>
+                </li>
+
+            </ul>
+        </strong>
+        <br><br>
+        <a href="index.html"><button>Return home</button></a>
+    </div>
+
+    <script>
+        // JavaScript code for success.html
+
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const transactionId = urlParams.get('transactionId');
+        const amount = urlParams.get('amount');
+
+        // Update the page with the transaction ID and amount
+        document.getElementById('transactionId').textContent = transactionId;
+        document.getElementById('amount').textContent = amount / 100;
+    </script>
+
+    <!-- footer section starts here -->
+    <div id="footer"></div>
+    <!-- footer section ends here -->
+
+
+    <script src="payment.js"></script>
+</body>
+
+</html>

@@ -40,12 +40,29 @@
       box-sizing: border-box;
   }
 
+  #pay_btn:disabled {
+      background-color: #555;
+  }
+
+  #pay_btn:disabled:hover {
+      background-color: #555;
+  }
+
+  .ca {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+  }
+
   .form-group .fa {
       margin-right: 10px;
       color: #ccc;
   }
 
-  .btn {
+  #pay_btn {
       display: inline-block;
       background-color: #dc1544;
       color: #fff;
@@ -55,14 +72,30 @@
       transition: all 0.3s ease;
   }
 
+  .status {
+      width: 80%;
+      margin: auto;
+      margin-top: 25px;
+      text-align: left;
+      display: none;
+      line-height: 2rem;
+      padding-left: 15%;
+  }
+
   .btn:hover {
-      background-color: #555;
+      background-color: #2857e6;
   }
 
   /* slide bar */
   .slider-wrapper {
       display: flex;
       align-items: center;
+  }
+
+  .form-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
 
   #slider {
@@ -113,27 +146,6 @@
       padding: 0 8px;
   }
 
-  #month-select {
-
-      width: 20%;
-      height: 40px;
-      border-radius: 20px;
-      background: #c8c8c8;
-      outline: none;
-      cursor: pointer;
-      padding: 0 8px;
-  }
-
-  #year-select {
-
-      width: 20%;
-      height: 40px;
-      border-radius: 20px;
-      background: #c8c8c8;
-      outline: none;
-      cursor: pointer;
-      padding: 0 8px;
-  }
 
   select {
       display: inline-block;

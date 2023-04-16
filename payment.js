@@ -1,3 +1,4 @@
+const stripe = Stripe('pk_test_51MsoG4SDg7tLEBalSJ0FLLqS7IJ6viDm0aN02aXGGB7IZxrnFLEvZvpqUgvjVqepubcRtJSk6fwzxAZiN1emnVPZ00zzyjLcWk');
 const cardnum = document.querySelector('#cardnum')
 const cardexp = document.querySelector('#cardexp')
 const cardcvc = document.querySelector('#cardcvc')
@@ -45,6 +46,9 @@ CardcvcElm.on('change', (e) => {
         btn.disabled = false
 
     }
+    var cvcInput = document.querySelector('.StripeElement iframe');
+    cvcInput.contentDocument.querySelector('input').type = 'password';
+
 })
 btn.addEventListener('click', () => {
     let pay_amount = document.querySelector('#amount').value;

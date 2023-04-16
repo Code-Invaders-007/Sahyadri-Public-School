@@ -22,6 +22,11 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    height: fit-content ;
 }
 
 .form {
@@ -40,7 +45,7 @@ textarea {
 .contact-form {
     background-color: #224bcf;
     max-width: 900px;
-    min-width: 500px;
+    min-width: 320px;
     position: relative;
     overflow: hidden;
     /* width: auto; */
@@ -266,6 +271,13 @@ textarea.input {
 @media (max-width: 480px) {
     .container {
         padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* align-items:center; */
+        /* how to make it appear on top */
+
+
     }
 
     .contact-info:before {
@@ -305,3 +317,56 @@ textarea.input {
         padding: 0.45rem 1.2rem;
     }
 }
+
+@media (max-width: 400px) {
+    .input-container label {
+        font-size: 1.4rem;
+    }
+
+    .input-container.focus label {
+        font-size: 1rem;
+    }
+
+    .container {
+        margin: 0;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .contact-form {
+        margin: 0;
+        padding-top: 0;
+        min-width: 380px;
+        font-style: normal;
+        font-size: 70%;
+    }
+
+    form {
+        margin: 0;
+        display: flexbox;
+        padding-top: 25px;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 75%;
+        font-weight: 600;
+    }
+
+    .text,
+    .information,
+    .social-media p {
+        font-size: 4rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 0.45rem 1.2rem;
+        font-size: 2rem;
+    }
+}
+
+
